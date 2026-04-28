@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Image Detective - AI & Source Finder",
+  "version": "1.0.0",
+  "description": "Detect AI-generated images, Photoshop edits, and find image sources with TinEye",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:5000/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icons/icon16.png",
+      "48": "icons/icons/icon48.png",
+      "128": "icons/icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icons/icon16.png",
+    "48": "icons/icons/icon48.png",
+    "128": "icons/icons/icon128.png"
+  }
+}

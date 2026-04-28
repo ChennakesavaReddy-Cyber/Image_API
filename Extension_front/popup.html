@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Detective</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Image Detective</h1>
+            <p class="subtitle">AI Detection & Source Finder</p>
+        </div>
+
+        <div class="quota-bar">
+            <div class="quota-info">
+                <span id="quotaText">Loading quota...</span>
+            </div>
+            <div class="quota-progress">
+                <div id="quotaFill" class="quota-fill"></div>
+            </div>
+        </div>
+
+        <div class="upload-section">
+            <input type="file" id="fileInput" accept="image/*" hidden>
+            <button id="uploadBtn" class="btn-primary">
+                 Upload Image
+            </button>
+            <p class="hint">Or right-click any image and select "Analyze with Image Detective"</p>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing image...</p>
+        </div>
+
+        <div id="results" class="results" style="display: none;">
+
+            <div class="preview-box">
+                <img id="imagePreview" src="" alt="Preview">
+            </div>
+
+            <div class="result-card">
+                <h2>AI/Photoshop Detection</h2>
+                <div class="verdict-box" id="verdictBox">
+                    <div class="verdict-icon" id="verdictIcon">❓</div>
+                    <div class="verdict-text">
+                        <h3 id="verdictTitle">Analyzing...</h3>
+                        <p id="verdictDesc"></p>
+                    </div>
+                </div>
+
+                <div class="tests-list" id="testsList"></div>
+            </div>
+
+            <div class="result-card">
+                <h2> Image Source (TinEye)</h2>
+
+                <div id="tinyeyeResults">
+                </div>
+
+                <div class="first-appearance" id="firstAppearance" style="display: none;">
+                    <h3> First Appeared Online:</h3>
+                    <div class="appearance-box">
+                        <p class="date" id="firstDate"></p>
+                        <a id="firstUrl" href="#" target="_blank" class="source-link"></a>
+                    </div>
+                </div>
+
+                <div id="topMatches" class="matches-list" style="display: none;">
+                    <h3> Top Matches:</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div class="footer">
+            <p>Powered by OpenCV + TinEye API</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
