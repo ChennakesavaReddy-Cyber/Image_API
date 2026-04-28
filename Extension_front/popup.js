@@ -1,4 +1,4 @@
-const API_URL = 'https://your-codespace-name-5000.app.github.dev/analyze';
+const API_URL = 'https://supreme-invention-x56wxgxgxj67364w7-5000.app.github.dev';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadQuota();
