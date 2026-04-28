@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://your-codespace-name-5000.app.github.dev/analyze';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadQuota();
