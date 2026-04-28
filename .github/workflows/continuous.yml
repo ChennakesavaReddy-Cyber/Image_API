@@ -1,0 +1,21 @@
+name: Continuous Execution
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up environment
+        uses: actions/setup-python@v4 # Or setup-node, etc.
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run extension
+        run: python main.py
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
