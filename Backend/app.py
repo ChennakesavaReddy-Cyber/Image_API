@@ -133,10 +133,10 @@ def detect_ai_photoshop(opencv_img, pil_img):
             results['verdict'] = 'High Risk'
             results['is_ai_generated'] = noise_score > 60 or edge_score > 45
             results['is_photoshopped'] = ela_score > 60
-        elif avg_score > 40:
+        elif avg_score > 35:
             results['verdict'] = 'Medium Risk'
-            results['is_ai_generated'] = noise_score > 50
-            results['is_photoshopped'] = ela_score > 50
+            results['is_ai_generated'] = noise_score > 40
+            results['is_photoshopped'] = ela_score > 30
         else:
             results['verdict'] = 'Low Risk (Likely Authentic)'
 
