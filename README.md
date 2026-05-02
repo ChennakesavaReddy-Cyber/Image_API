@@ -7,7 +7,6 @@ It combines custom computer vision algorithms with the TinEye API to provide a c
 A powerful Chrome extension that detects AI-generated images, Photoshop manipulation, and finds image sources across the web using advanced forensic analysis and reverse image search.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Python](https://img.shields.io/badge/python-3.8+-yellow.svg)
 
 
